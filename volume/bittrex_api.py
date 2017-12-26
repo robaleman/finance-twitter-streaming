@@ -10,7 +10,6 @@ class bittrex(object):
     def __init__(self):
         self.public = ['getmarkets', 'getcurrencies', 'getticker', 'getmarketsummaries', 'getmarketsummary', 'getorderbook', 'getmarkethistory']
         
-    
     def query(self, method, values={}):
         if method in self.public:
             url = 'https://bittrex.com/api/v1.1/public/'
@@ -39,7 +38,6 @@ class bittrex(object):
         else:
             return response["message"]
     
-    
     def getmarkets(self):
         return self.query('getmarkets')
     
@@ -48,9 +46,6 @@ class bittrex(object):
     
     def getticker(self, market):
         return self.query('getticker', {'market': market})
-    
-    def getmarketsummaries(self):
-        return self.query('getmarketsummaries')
     
     def getmarketsummary(self, market):
         return self.query('getmarketsummary', {'market': market})
