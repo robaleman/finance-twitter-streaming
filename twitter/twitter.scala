@@ -13,7 +13,7 @@ object Twitter {
 
   def main(args: Array[String]) {
 
-    // authenticate using personal Twitter API tokens
+    // authenticate using personal Twitter API tokens, replace "hidden" with your appropriate API keys
     val consumerKey = "hidden"
     val consumerSecret = "hidden"
     val accessToken = "hidden"
@@ -36,7 +36,7 @@ object Twitter {
     // extracts text from incoming tweets
     val statuses = tweets.map(status => status.getText())
 
-    // filters tweets that contain certain keywords and prints to console
+    // filters tweets that contain certain keywords and prints to console, replace "bitcoin" with your desired currency
     val btc_tweets = statuses.filter(status => status contains "bitcoin")
     btc_tweets.print()
 
