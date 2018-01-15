@@ -1,6 +1,12 @@
 # Crypto Twitter Streaming
-A quick tool that streams Twitter data realtime and filters for any tweets related to specific cryptocurrencies. This project is built in Scala and uses Spark Streaming with the Twitter API. You will need to generate your own authentication keys from [your Twitter account](https://apps.twitter.com/).
+A quick tool that streams Twitter data realtime and filters for any tweets related to specific cryptocurrencies. This project is built in Scala and uses Spark Streaming with the Twitter API. You will need to generate your own authentication keys from [your Twitter account](https://apps.twitter.com/) and replace the appropriate variables.
 
+```
+val consumerKey = "INSERT_KEY"
+val consumerSecret = "INSERT_KEY"
+val accessToken = "INSERT_KEY"
+val accessTokenSecret = "INSERT_KEY"
+```
 
 
 ## Usage
@@ -32,4 +38,4 @@ $SNGLSBTC
 $ign
 ```
 
-This data can be collected and filtered to create a mention count that can be used to see which currencies may be trending on social media. Alternatively, you can access the text and potentially run sentiment analysis. 
+This data can be collected and filtered to create a mention count that can be used to see which currencies may be trending on social media. You can also run analysis on the text of each tweet.
