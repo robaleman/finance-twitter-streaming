@@ -10,32 +10,34 @@ val accessTokenSecret = "INSERT_KEY"
 
 
 ## Usage
-On launch, the program will start streaming and will count up all $cashtags in batches of specified intervals (default every 60 seconds). Output should look like the following.
-
+On launch, the program will start streaming and will count up all $cashtags in batches of specified intervals (default every 60 seconds). Output should look like the following:
 ```
 -------------------------------------------
-Time: 1515993840000 ms
+Time: 1515995160000 ms
 -------------------------------------------
-$FRFS
-$SSOF
-$BYOC
-$CWIR
-$GNIN
-$HPNN
-$NOUV
-$LEAS
+$CLAM
+$QTUM
+$WAVES
+$$$$…
 
 -------------------------------------------
-Time: 1515993900000 ms
+Time: 1515995220000 ms
 -------------------------------------------
-$Zap
+$enj
+$icx
+$XRB
 
 -------------------------------------------
-Time: 1515993960000 ms
+Time: 1515995280000 ms
 -------------------------------------------
-$SNGLS
-$SNGLSBTC
-$ign
+$ven,
+$ICX,
+$SPHTX,
+$TAU,
+$VEE,
+$BTO,
+$HPB
+$BCH
 ```
 
 This data can be collected and filtered to create a mention count that can be used to see which currencies may be trending on social media. You can also run analysis on the text of each tweet.
