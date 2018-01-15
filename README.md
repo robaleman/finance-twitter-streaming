@@ -1,7 +1,35 @@
-# crypto-tools
-my personal collection of tools used for gathering various data on cryptocurrency; potentially useful for making more informed trades and investments. 
+# Crypto Twitter Streaming
+A quick tool that streams Twitter data realtime and filters for any tweets related to specific cryptocurrencies. This project is built in Scala and uses Spark Streaming with the Twitter API. You will need to generate your own authentication keys from [your Twitter account](https://apps.twitter.com/).
 
-- twitter: counts mentions of different cryptocoins on Twitter and signals if number of mentions jumps an unusual amount. can be streamed using Spark with Scala and the Twitter API. 
 
-- volume (IN PROGRESS): periodically checks cryptocoin volume and fires signals when volume jumps an unusual amount. can be ran using Python with Bittrex API.
 
+## Usage
+On launch, the program will start streaming and will count up all $cashtags in batches of specified intervals (default every 60 seconds). Output should look like the following.
+
+```
+-------------------------------------------
+Time: 1515993840000 ms
+-------------------------------------------
+$FRFS
+$SSOF
+$BYOC
+$CWIR
+$GNIN
+$HPNN
+$NOUV
+$LEAS
+
+-------------------------------------------
+Time: 1515993900000 ms
+-------------------------------------------
+$Zap
+
+-------------------------------------------
+Time: 1515993960000 ms
+-------------------------------------------
+$SNGLS
+$SNGLSBTC
+$ign
+```
+
+This data can be collected and filtered to create a mention count that can be used to see which currencies may be trending on social media. Alternatively, you can access the text and potentially run sentiment analysis. 
